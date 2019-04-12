@@ -5,6 +5,8 @@ docker run -it --net=host \
 	-e DISPLAY=$DISPLAY \
 	-e QT_GRAPHICSSYSTEM=native \
 	-e USER=$USER \
+	-e START_TMUX=$TRUE \
+	-e CONTAINER_NAME=ros-melodic-dev \
 	-v "/tmp/.X11-unix:/tmp/.X11-unix" \
 	-v "/etc/group:/etc/group:ro" \
 	-v "/etc/passwd:/etc/passwd:ro" \
@@ -12,5 +14,5 @@ docker run -it --net=host \
 	-v "/etc/sudoers.d:/etc/sudoers.d:ro" \
 	-v "/home/$USER/:/home/$USER/" \
 	--workdir=/home/$USER \
-	--name=jupyter-ros-dev \
-	luckierdodge/jupyter-ros:v0.1
+	--name=ros-melodic-dev \
+	luckierdodge/ros_melodic:dev
