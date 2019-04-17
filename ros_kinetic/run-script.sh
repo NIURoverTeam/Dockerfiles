@@ -15,5 +15,5 @@ docker run -it --net=host \
 	-v "/home/$USER/:/home/$USER/" \
 	--device=/dev/dri:/dev/dri \
 	--workdir=/home/$USER \
-	--name=ros-melodic-dev \
-	luckierdodge/ros_melodic:dev
+	--name=ros-kinetic-dev \
+	luckierdodge/ros_kinetic:dev
