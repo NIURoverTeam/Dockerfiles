@@ -6,7 +6,7 @@ docker run -it --net=host \
 	-e QT_GRAPHICSSYSTEM=native \
 	-e USER=$USER \
 	-e START_TMUX=$TRUE \
-	-e CONTAINER_NAME=ros-melodic-dev \
+	-e CONTAINER_NAME=ros-kinetic-dev \
 	-v "/tmp/.X11-unix:/tmp/.X11-unix" \
 	-v "/etc/group:/etc/group:ro" \
 	-v "/etc/passwd:/etc/passwd:ro" \
