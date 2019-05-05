@@ -6,7 +6,7 @@ docker run -it --net=host \
 	-e QT_GRAPHICSSYSTEM=native \
 	-e USER=$USER \
 	-e START_TMUX=$TRUE \
-	-e CONTAINER_NAME=ros-melodic-dev \
+	-e CONTAINER_NAME=ros-kinetic-dev \
 	-v "/tmp/.X11-unix:/tmp/.X11-unix" \
 	-v "/etc/group:/etc/group:ro" \
 	-v "/etc/passwd:/etc/passwd:ro" \
@@ -15,5 +15,5 @@ docker run -it --net=host \
 	-v "/home/$USER/:/home/$USER/" \
 	--device=/dev/dri:/dev/dri \
 	--workdir=/home/$USER \
-	--name=ros-melodic-dev \
-	luckierdodge/ros_melodic:dev
+	--name=ros-kinetic-dev \
+	luckierdodge/ros_kinetic:dev
