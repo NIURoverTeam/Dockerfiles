@@ -19,7 +19,7 @@
 CONTAINER_USER=$USER
 CONTAINER_NAME=ros2_foxy
 USER_ID=$UID
-IMAGE=luckierdodge/ros2_foxy:latest
+IMAGE=niurover/ros2_foxy:latest
 xhost +local:$CONTAINER_USER
 xhost +local:root
 
