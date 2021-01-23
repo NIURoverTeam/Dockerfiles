@@ -20,8 +20,11 @@ CONTAINER_USER=$USER
 CONTAINER_NAME=ros2_foxy
 USER_ID=$UID
 IMAGE=niurover/ros2_foxy:latest
-xhost +local:$CONTAINER_USER
-xhost +local:root
+if [ $(uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/ip') ];
+then
+	xhost +local:$CONTAINER_USER
+	xhost +local:root
+fi
 
 sudo docker run -it --rm \
 	--name $CONTAINER_NAME \
@@ -37,5 +40,8 @@ sudo docker run -it --rm \
 	--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
 	$IMAGE bash\
 
-xhost -local:$CONTAINER_USER
-xhost -local:root
+if [ $(uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/ip') ];
+then
+	xhost -local:$CONTAINER_USER
+	xhost -local:root
+fi
