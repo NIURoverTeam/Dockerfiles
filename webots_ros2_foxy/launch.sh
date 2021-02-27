@@ -19,7 +19,7 @@
 CONTAINER_USER=$USER
 CONTAINER_NAME=webots_ros2_foxy
 USER_ID=$UID
-IMAGE=webots_ros2_foxy:latest
+IMAGE=niurover/webots_ros2_foxy:latest
 if [ $(uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/ip') ];
 then
 	xhost +local:$CONTAINER_USER
