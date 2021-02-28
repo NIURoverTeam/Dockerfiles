@@ -17,7 +17,7 @@
 # Modified by Ryan D. Lewis
 
 USER_ID=$UID
-CONTAINER_NAME=ros2_foxy
+CONTAINER_NAME=webots_ros2_foxy
 sudo docker exec -it \
 	--user=$USER_ID \
 	$CONTAINER_NAME bash -c "source /opt/ros/foxy/setup.bash && bash"\
