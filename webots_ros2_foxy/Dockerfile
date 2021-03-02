@@ -6,7 +6,10 @@ FROM $BASE_IMAGE_WEBOTS AS base
 FROM $IMAGE_ROS2 AS image_ros2
 
 # resolve a missing dependency for webots demo
-RUN sudo apt update && apt install -y libxtst6
+RUN apt-get update && apt-get install -y \
+		libxtst6 \
+		&& apt-get clean \
+		&& rm -rf /var/lib/apt/lists/*
 
 # Finally open a bash command to let the user interact
 CMD ["/bin/bash"]
